@@ -43,7 +43,7 @@ function morerows () {
   var clonedchildren = clonedrow.childNodes;
   for (i = 0; i < clonedchildren.length; i++) {
     if (typeof clonedchildren[i].value !== 'undefined') {
-      clonedchildren[i].value = ''
+      clonedchildren[i].value = '';
     }
   }
   namesblockcentered.appendChild(clonedrow);
