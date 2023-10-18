@@ -4,13 +4,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Secret Santa Picker</title>
+  <title>replit</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body onload="initiate()">
   <script src="scriptpg1.js"></script>
   <center><h3>Enter Names</h3></center>
+  <button onclick = "nextpage()">TestNext</button>
+  <center>
+    <a href = "pg2.html">
+      <button onclick = "nextpage()">Next</button>
+    </a>
+  </center>
   <center id = "namesblockcentered">
     <div id = "namesrow1">
       <input type = "text" id = "textinput1"> </input>
@@ -21,6 +27,7 @@
     </div>
   </center>
   <br><br>
-</body>
   <button onclick = "morerows()">More Names </button>
+</body>
+
 </html>
