@@ -91,11 +91,22 @@ function makeselections () {
   return blerp;
 }
 
+function hideall() {
+  var boxholder = document.getElementById('boxholder');
+  for (let i = 0; i < boxholder.children.length; i++) {
+    element = boxholder.children[i]
+    element.children[3].innerHTML = 'Click to reveal';
+    element.children[5].style.display = 'none'
+
+  }
+}
+
 function reveal(buttonsending) {
   var parent = buttonsending.parentElement;
   var texttoshow = parent.children[5];
   
   if (buttonsending.innerHTML == "Click to reveal") {
+    hideall()
     buttonsending.innerHTML = 'Hide';
     texttoshow.style.display = 'block'
   }
