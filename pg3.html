@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Secret Santa Picker</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+  
+<body onload = "pg3load()">
+  <script src="scriptpg3.js"></script>
+  <h3> Calculation Complete!</h3>
+  <div id='template' style="display:none">
+    <text id="name">[NAME]</text>
+    <text>got...</text><br>
+    <button onclick="reveal(this)">Click to reveal</button><br>
+    <text id = 'hiddentext' style="display:none">[Second name]</text>
+    <br>
+  </div>
+  <div id = "boxholder"></div>
+</body>
+
+</html>
