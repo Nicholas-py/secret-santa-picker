@@ -10,13 +10,10 @@ function pg3load() {
   names = JSON.parse(localStorage.getItem('names'));
   selections = JSON.parse(localStorage.getItem('selections'));
 
-  var rowcount = Math.floor(Math.sqrt(names.length)-0.001)+1
   for (let i=0; i<names.length; i++) {
     let clone = template.cloneNode(true);
     clone.children[0].innerHTML = names[i]
     clone.children[5].innerHTML = selections[i]
-    clone.setAttribute('lex',i%rowcount+1)
-    clone.setAttribute('ley',Math.floor(i/rowcount)+1)
     clone.style.display = 'block'
     boxholder.appendChild(clone)
     
