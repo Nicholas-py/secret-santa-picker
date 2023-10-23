@@ -1,6 +1,6 @@
-var blockednames
-var names
-var selections
+var blockednames;
+var names;
+var selections;
 
 function pg3load() {
   var template = document.getElementById('template');
@@ -12,10 +12,10 @@ function pg3load() {
 
   for (let i=0; i<names.length; i++) {
     let clone = template.cloneNode(true);
-    clone.children[0].innerHTML = names[i]
-    clone.children[5].innerHTML = selections[i]
-    clone.style.display = 'block'
-    boxholder.appendChild(clone)
+    clone.children[0].innerHTML = names[i];
+    clone.children[5].innerHTML = selections[i];
+    clone.style.display = 'block';
+    boxholder.appendChild(clone);
     
   }
 }
@@ -24,9 +24,9 @@ function pg3load() {
 function hideall() {
   var boxholder = document.getElementById('boxholder');
   for (let i = 0; i < boxholder.children.length; i++) {
-    element = boxholder.children[i]
+    element = boxholder.children[i];
     element.children[3].innerHTML = 'Click to reveal';
-    element.children[5].style.visibility = "hidden"
+    element.children[5].style.visibility = "hidden";
 
   }
 }
@@ -36,7 +36,7 @@ function reveal(buttonsending) {
   var texttoshow = parent.children[5];
   
   if (buttonsending.innerHTML == "Click to reveal") {
-    hideall()
+    hideall();
     buttonsending.innerHTML = 'Hide';
     texttoshow.style.visibility = "visible"
   }
