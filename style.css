@@ -7,3 +7,12 @@ input {
   height: 20px;
   width: 100px;
 }
+
+.gridcontainer {
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: 80px;
+
+}
+
+
