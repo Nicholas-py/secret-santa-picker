@@ -13,9 +13,6 @@ function buildbigarray(names) {
     currentlist.splice(i,1);
     bigarray.push(currentlist);
   }
-  console.log(JSON.stringify(bigarray));
-  console.log(JSON.parse(JSON.stringify(bigarray))[0]);
-  console.log(bigarray[0]);
 }
 
 
@@ -38,7 +35,6 @@ function hide(element) {
 
 
 function topbuttonclicked(button) {
-  console.log(button);
   if (typeof topbuttonselection !== 'undefined') {
     topbuttonselection.disabled = false;
   }
@@ -48,7 +44,6 @@ function topbuttonclicked(button) {
 }
 
 function bottombuttonclicked(button) {
-  console.log(button);
   var topbuttonname = topbuttonselection.innerHTML;
   var bottombuttonname = button.innerHTML;
   var topbuttonindex = names.indexOf(topbuttonname);
@@ -57,7 +52,6 @@ function bottombuttonclicked(button) {
   if (indextodelfrom !== -1) {
     listtodelfrom.splice(indextodelfrom,1);
   }
-  console.log(listtodelfrom);
 
   hiddentext.innerHTML = topbuttonname+" can't get "+bottombuttonname;
   show(hiddentext);
@@ -136,7 +130,6 @@ function deleteaname(namessquare,name, starti) {
     if (indexplace !== -1) {
       namessquare[i].splice(indexplace,1);
       if (namessquare[i].length == 0) {
-        console.log('returned false');
         return false;
       }
     }
@@ -145,7 +138,6 @@ function deleteaname(namessquare,name, starti) {
 }
 
 function attemptselections(namessquare) {
-  console.log('attempting');
   var items = [];
   var b = true;
   var worked = true;
@@ -167,7 +159,6 @@ function makeselections (array) {
   var i = 0;
   while (!blerp && i < 100){
     blerp = attemptselections(copy(array));
-    console.log(blerp);
     i++
   }
   return blerp;
