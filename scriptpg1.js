@@ -18,17 +18,13 @@ function initiate() {
     morerows();
   }
 
-  console.log(names);
   var lastindexused = 0;
   var rows = namesblockcentered.childNodes;
   for (let i = 0; i < rows.length; i++) {
     var items = rows[i].childNodes;
     for (let j = 0; j < items.length; j++) {
-      console.log(j);
-      console.log(items[j]);
       if (typeof items[j].value !== 'undefined') {
         items[j].value = names[lastindexused];
-        console.log(items[j].value);
         lastindexused++;
       }
       if (lastindexused >= names.length){
@@ -67,5 +63,4 @@ function nextpage () {
     }
   }
   localStorage.setItem('names',stringify(names));
-  console.log(localStorage.getItem('names'));
 }
